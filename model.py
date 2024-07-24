@@ -5,7 +5,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # PostgreSQL configuration with SSL mode
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://avnadmin:AVNS_Ao36hgoqP-xU5EiyEsn@pg-17ae6fae-vinayakdb.a.aivencloud.com:28101/defaultdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
     'connect_args': {
         'sslmode': 'require',
