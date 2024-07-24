@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <p>Invoice Number: {{ invoice.invoice_number }}</p>
+    <p>Date: {{ invoice.date }}</p>
+    <p>Recipient: {{ invoice.recipient }}</p>
+    <p>Ship To: {{ invoice.ship_to }}</p>
+    
+    <h2>Items</h2>
+    <ul>
+    {% for item in invoice.items %}
+        <li>{{ item.description }} - {{ item.quantity }} @ {{ item.unit_price }} each, Total: {{ item.total }}</li>
+    {% endfor %}
+    </ul>
+    
+    <p>Subtotal: {{ subtotal }}</p>
+    <p>Sales Tax: {{ sales_tax }}%</p>
+    <p>Shipping & Handling: {{ shipping_handling }}</p>
+    <h3>Total Due: {{ total_due }}</h3>
+</body>
+</html>

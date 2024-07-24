@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+Flask-RESTful
+psycopg2-binary
+Flask-Migrate
+reportlab

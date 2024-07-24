@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Invoice</title>
+</head>
+<body>
+    <h1>Create Invoice</h1>
+    <form action="/create_invoice" method="post">
+        <label for="recipient">Recipient:</label>
+        <input type="text" id="recipient" name="recipient" required><br>
+
+        <label for="ship_to">Ship To:</label>
+        <input type="text" id="ship_to" name="ship_to" required><br>
+
+        <label for="sales_tax">Sales Tax (%):</label>
+        <input type="number" step="0.01" id="sales_tax" name="sales_tax" required><br>
+
+        <label for="shipping_handling">Shipping & Handling ($):</label>
+        <input type="number" step="0.01" id="shipping_handling" name="shipping_handling" required><br>
+
+        <label for="items">Items (format: description,quantity,unit_price):</label>
+        <textarea id="items" name="items" required></textarea><br>
+
+        <input type="submit" value="Create Invoice">
+    </form>
+</body>
+</html>
